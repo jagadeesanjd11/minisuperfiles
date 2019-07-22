@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mini super files 23</title>
+    <meta name="description" content="Download mini super files | programming tips | Download Web Tools"/>
+    <script src="myfiles/jsPager/jsPager.js"></script>
+  </head>
+  <body id="top">
+  Hello world
+<script>
+//jsChager
+var doc=new jsPager(
+    'Mini super files',
+    ["https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700",
+    "css/bootstrap.min.css",
+    "css/font-awesome.min.css",
+    "css/main.css"],
+    ["js/jquery-3.2.1.slim.min.js",
+    "js/popper.min.js",
+    "js/bootstrap.min.js",
+    "js/main.js"]
+);
+doc.setBody(`<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <div class="masthead clearfix" style="position: initial;">
+        <div class="inner">
+          <div style="text-align: left;">
+            <button style="padding: 0.5rem 1rem;border-radius: 10px;margin-right: 10px;" type="button" class="btn btn-xs btn-default btn-notify">Home</button>
+            <button style="padding: 0.5rem 1rem;border-radius: 10px;" type="button" class="btn btn-xs btn-default btn-notify">Super Files</button>
+          </div>
+          <!--<h3 class="masthead-brand">Welcome to Mini Super Files</h3>-->
+          <!--<nav class="nav nav-masthead">
+            <a class="nav-link nav-social" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a class="nav-link nav-social" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a class="nav-link nav-social" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            <a class="nav-link nav-social" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </nav>-->
+        </div>
+      </div><br><div class="inner cover">
+        <h1 class="cover-heading" style="letter-spacing: 5px;">Welcome to Mini Super Files</h1>
+        <p class="lead cover-copy">This site very useful for web developers and software developers. Here available to download programming code, plugins and free web tools.</p>
+        <p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Let's Start</button></p>
+      </div>
+      <div class="mastfoot" style="position: initial;">
+        <div class="inner">
+          <p> Contact @ <a href="mailto:jagadeesanjd11@gmail.com" target="_blank">jagadeesanjd11@gmail.com</a>.</p>
+        </div>
+      </div>
+  </div>
+    <!--<footer>
+      <a href="">Email: jagadeesanjd11@gmail.com</a><a href="">Phone: +919715059096</a>
+    </footer>-->
+  </div>
+  </div>
+  `);
+doc.setJS(`
+console.log('yes');
+function test(){
+    console.log('fun yes');
+}
+test();
+`);
+doc.docChange();
+</script>
+  </body>
+</html>
