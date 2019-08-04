@@ -33,7 +33,6 @@ doc.setBody(`<div class="site-wrapper">
             <a class="btn btn-xs btn-default btn-notify sf-menu active" href="superfiles.html">Super Files</a>
             <a class="btn btn-xs btn-default btn-notify sf-menu">Donate</a>
           </div>
-          <!--<h3 class="masthead-brand">Welcome to Mini Super Files</h3>-->
           <!--<nav class="nav nav-masthead">
             <a class="nav-link nav-social" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             <a class="nav-link nav-social" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -41,18 +40,29 @@ doc.setBody(`<div class="site-wrapper">
             <a class="nav-link nav-social" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
           </nav>-->
         </div>
-      </div><br><div class="inner cover">
-        <h1 class="cover-heading" style="letter-spacing: 5px;">Welcome to Mini Super Files</h1>
-        <p class="lead cover-copy">This site very useful for web developers and software developers. Here available to download programming code, plugins and free web tools.</p>
-        <p class="lead"><button onclick="location.href='superfiles.html'" type="button" class="btn btn-lg btn-default btn-notify" >Let's Start</button></p>
-      </div>
+      </div><br>
+        <div class="inner cover">
+
+          <div class="row">`);
+  let pro=JSON.parse(doc.HttpReq('data/project.json'));
+  for(let i=0; i<pro.project.length; i++){
+  doc.setBody(`<div class="col-md-6">
+                <h3 class1="masthead-brand">${pro.project[i].name} ( ${pro.project[i].domains} )</h3>
+                <p class="lead cover-copy">${pro.project[i].info} <b>latest version ${pro.project[i].version}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p class="lead"><a href="documentation.html?project=${pro.project[i].slug}" style="padding: 7px 18px;text-transform: none;" class="btn btn-xs btn-default btn-notify sf-btn" >Go (Demo)</a></p>
+                <p class="lead"><a target="_blank" href="${pro.project[i].download}" style="padding: 7px 18px;text-transform: none;" class="btn btn-xs btn-default btn-notify sf-btn" >Download (Github)</a></p>
+              </div>`);
+  }
+  doc.setBody(`</div>
+        </div>
       <div class="mastfoot" style="position: initial;">
         <div class="inner">
           <p> Contact @ <a href="mailto:jagadeesanjd11@gmail.com" target="_blank">jagadeesanjd11@gmail.com</a>.</p>
           <p> <a href="#">Donete</a> | <a href="#">About</a> | <a href="#">Developer</a>#info </p>
         </div>
       </div>
-  </div>
     <!--<footer>
       <a href="">Email: jagadeesanjd11@gmail.com</a><a href="">Phone: +919715059096</a>
     </footer>-->
