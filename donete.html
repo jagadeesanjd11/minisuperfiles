@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mini super files 23</title>
+    <meta name="description" content="Download mini super files | programming tips | Download Web Tools"/>
+    <script src="myfiles/JsPager/JsPager.js"></script>
+  </head>
+  <body id="top">
+  Hello world
+<script>
+//jsChager
+var doc=new JsPager(
+    'Mini super files',
+    ["https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700",
+    "css/bootstrap.min.css",
+    "css/font-awesome.min.css",
+    "css/main.css"],
+    ["js/jquery-3.2.1.slim.min.js",
+    "js/popper.min.js",
+    "js/bootstrap.min.js",
+    "js/main.js"]
+);
+doc.setBody(`<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <div class="masthead clearfix" style="position: initial;">
+        <div class="inner">
+          <div style="text-align: left;">
+            <a class="btn btn-xs btn-default btn-notify sf-menu" href="index.html">Home</a>
+            <a class="btn btn-xs btn-default btn-notify sf-menu active" href="superfiles.html">Super Files</a>
+            <a class="btn btn-xs btn-default btn-notify sf-menu">Donate</a>
+          </div>
+          <!--<h3 class="masthead-brand">Welcome to Mini Super Files</h3>-->
+          <!--<nav class="nav nav-masthead">
+            <a class="nav-link nav-social" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a class="nav-link nav-social" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a class="nav-link nav-social" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            <a class="nav-link nav-social" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </nav>-->
+        </div>
+      </div><br><div class="inner cover">
+        <h3 style="letter-spacing: 5px;">Need your supports (Donations)</h3>
+        <p>Kindly donate me. I spent more time to create this products. Your supports use to create a new products or update this products. Give your small contribution, it's make big changes.</p>
+        <p>Use UPI payment apps to Donete (like a Gpay, PhonePe)</p>
+        <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <img style="height: 350px;" src="scan.jpg">
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+          <br>
+          <label>UPI number</label>
+          <div class="input-group">
+            <input name="phone" class="form-control" type="text" value="9715059096" readonly>
+            <div class="input-group-append">
+            <button onclick="copytext('phone')" class="btn btn-info">copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <br>
+          <label>UPI ID</label>
+          <div class="input-group">
+            <input name="id" class="form-control" type="text" value="jagadeesanjd11@okicici" readonly>
+            <div class="input-group-append">
+            <button onclick="copytext('id')" class="btn btn-info">copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <div class="mastfoot" style="position: initial;">
+        <div class="inner">
+          <p> Contact @ <a href="mailto:jagadeesanjd11@gmail.com" target="_blank">jagadeesanjd11@gmail.com</a>.</p>
+          <p> <a href="#">Donete</a> | <a href="#">About</a> | <a href="#">Developer</a>#info </p>
+        </div>
+      </div>
+  </div>
+    <!--<footer>
+      <a href="">Email: jagadeesanjd11@gmail.com</a><a href="">Phone: +919715059096</a>
+    </footer>-->
+  </div>
+  </div>
+  `);
+doc.setJS(`
+console.log('yes');
+function test(){
+    console.log('fun yes');
+}
+test();
+function copytext(name){
+  elm=document.querySelector("input[name="+name+"]");
+  elm.select();
+  elm.setSelectionRange(0,99999);
+  document.execCommand('copy')
+}
+`);
+doc.setStyle(`
+a{
+  color: white;
+}
+.sf-menu{
+  padding: 0.5rem 1rem;border-radius: 10px;margin-right: 10px;
+}
+.sf-btn{
+  padding: 7px 18px;text-transform: none;
+}`);
+doc.docChange();
+</script>
+  </body>
+</html>
