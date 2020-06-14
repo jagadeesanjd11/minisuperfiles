@@ -1,13 +1,16 @@
 {
     "pro_details":[
         { "id":1,"pro_id":1,"script":[],"style":[],"js":"var tree= new DataTree(document.querySelector('#datatree'),{name:'Creatures',d:[{name:'Animals',d:[]},{name:'Humans',d:[{name:'Women',d:[]},{name:'Men',d:[]}]},{name:'Brids',d:[]}]}); document.querySelector('#dtPrint').addEventListener('click',function(){ console.log('DataTree',tree.getData()); })","css":"","tutorial":[
+            { "title":"Usage","type":"text","content":"<ol type=\"1\"><li>+ button use to add famliy members of selected data.</li><li>e button use to edit selected data.</li><li>- buttom use to remove selectd data. </li></ol>" },
             { "title":"Example","type":"demo","content":"<h1 align='center'>Data Tree</h1><div id='datatree'></div>" },
-            { "title":"","type":"code","file":"js","content":"var tree= new DataTree(\n   document.querySelector('#datatree'),\n   {name:'Creatures',d:[\n\t{name:'Animals',d:[]},\n\t{name:'Humans',d:[\n\t   {name:'Women',d:[]},\n\t   {name:'Men',d:[]}\n\t]},\n\t{name:'Brids',d:[]}\n   ]}\n);" },
-            { "title":"Syntax (parameter)","type":"syntax","content":"new DataTree(element)\nnew DataTree(element,data)\nnew DataTree(element,data,warning)\n\ndata = { name: 'name', d[ { name: 'name', d[{...}] ,...}] }" },
+            { "title":"HTML","type":"code","file":"html","content":"<script src=\"DataTree.js\"></script>\n<link href=\"DataTree.css\">\n<div id=\"datatree\"></div>" },
+            { "title":"JavaScript","type":"code","file":"js","content":"var tree = new DataTree(\n   document.querySelector('#datatree'),\n   {name:'Creatures',d:[\n\t{name:'Animals',d:[]},\n\t{name:'Humans',d:[\n\t   {name:'Women',d:[]},\n\t   {name:'Men',d:[]}\n\t]},\n\t{name:'Brids',d:[]}\n   ]}\n);\n\n//how to use methods\nvar data=tree.getData();\nconsole.log(data);" },
+            { "title":"Syntax (arguments)","type":"syntax","content":"new DataTree(element)\nnew DataTree(element,data)\nnew DataTree(element,data,warning)\n\ndata = { name: 'name', d[ { name: 'name', d[{...}] ,...}] }" },
             { "title":"element","type":"text","content":"Give DOM element, this element is target place to create DataTree." },
             { "title":"data (Optional)","type":"text","content":"Give object, It's use to load DataTree conent of the data." },
-            { "title":"warning (Optional)","type":"text","content":"It's booleen data type (true or false) and default value is true. confirm message control parameter. If given value is true, when try to delete data confirm popup asking 'Are sure to delete'. " },
-            { "title":"DataTree Methods","type":"html","content":"<div class='col-md-12'><h6><u>DataTree.getData()</u><h6><p>It's use to get data of DataTree and its retrun object. print to console log <a href='javascript:void(0)' id='dtPrint'>click here</a></p><h6><u>DataTree.render()</u><h6><p>It's use to reprint html element.</p></div>" }
+            { "title":"warning (Optional)","type":"text","content":"It's booleen data type (true or false) and default value is true. confirm message control parameter. If given value is true, when try to delete data confirm popup asking 'Are sure to delete'." },
+            { "title":"DataTree Methods","type":"html","content":"<dl><dt><code>DataTree.getData()</code><dt><dd>It's use to get data of DataTree and its retrun object. <ul><li><b>demo </b> : <mark><a href='javascript:void(0)' id='dtPrint'>click here</a></mark> print to console log</li><li><b>code</b> : <code>tree.getData();</code></li></ul></dd><dt><code>DataTree.render()</code><dt><dd>It's use to reprint html element.<ul><li><b>code</b> : <code>tree.render();</code></li></ul></dd></dl>" },
+            { "title":"Upcoming Update in DataTree","type":"html","content":"<ul><li>Different theme (disgin options) comming soon. Give your supports.</li></ul>" }
         ], 
         "gitScript":["https://raw.githubusercontent.com/ccampbell/rainbow/master/dist/rainbow.min.js","https://raw.githubusercontent.com/jagadeesanjd11/DataTree/master/DataTree.js"],"gitStyle":["https://raw.githubusercontent.com/ccampbell/rainbow/master/themes/css/monokai.css"]
      }
