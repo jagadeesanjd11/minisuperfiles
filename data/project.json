@@ -1,5 +1,6 @@
 {
     "project":[
-        { "id":1,"name":"DataTree","version":"1.01","slug":"datatree","domains":"JavaScript framework","info":"It's pure JavaScript framework and its handle large tree typies of data. dataTree is use to simple, fast and lite weight.", "download":"https://github.com/jagadeesanjd11/DataTree" } 
+        { "id":1,"name":"DataTree","version":"1.01","slug":"datatree","domains":"JavaScript framework","info":"It's pure JavaScript framework and its handle large tree typies of data. dataTree is use to simple, fast and lite weight. CRUD (Create, Read, Update, Delete) options available.", "download":"https://github.com/jagadeesanjd11/DataTree" },
+        { "id":2,"name":"MSFmultiSelect","version":"1.00","slug":"msfmultiselect","domains":"JavaScript plugin","info":"MSFmultiSelect (multiselect) is pure JavaScript user friendly multiselect plugin, don't need jQuery. It's very easy to use for developer and fast.<br>(web development tool).", "download":"https://github.com/jagadeesanjd11/MSFmultiSelect" } 
     ]
 }
