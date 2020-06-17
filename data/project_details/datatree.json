@@ -10,7 +10,7 @@
             { "title":"data (Optional)","type":"text","content":"Give object, It's use to load DataTree conent of the data." },
             { "title":"warning (Optional)","type":"text","content":"It's booleen data type (true or false) and default value is true. confirm message control parameter. If given value is true, when try to delete data confirm popup asking 'Are sure to delete'." },
             { "title":"DataTree Methods","type":"html","content":"<dl><dt><code>DataTree.getData()</code><dt><dd>It's use to get data of DataTree and its retrun object. <ul><li><b>demo </b> : <mark><a href='javascript:void(0)' id='dtPrint'>click here</a></mark> print to console log</li><li><b>code</b> : <code>tree.getData();</code></li></ul></dd><dt><code>DataTree.render()</code><dt><dd>It's use to reprint html element.<ul><li><b>code</b> : <code>tree.render();</code></li></ul></dd></dl>" },
-            { "title":"Upcoming Update in DataTree","type":"html","content":"<ul><li>Different theme (disgin options) comming soon. Give your supports.</li></ul>" }
+            { "title":"Upcoming Update in DataTree","type":"html","content":"<ul><li>Different theme (design options) comming soon. Give your supports.</li></ul>" }
         ], 
         "gitScript":["https://raw.githubusercontent.com/ccampbell/rainbow/master/dist/rainbow.min.js","https://raw.githubusercontent.com/jagadeesanjd11/DataTree/master/DataTree.js"],"gitStyle":["https://raw.githubusercontent.com/ccampbell/rainbow/master/themes/css/monokai.css"]
      }
