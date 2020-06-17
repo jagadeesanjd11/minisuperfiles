@@ -1,7 +1,7 @@
 {
     "pro_details":[
         { "id":1,"pro_id":1,"script":[],"style":[],"js":"var tree= new DataTree(document.querySelector('#datatree'),{name:'Creatures',d:[{name:'Animals',d:[]},{name:'Humans',d:[{name:'Women',d:[]},{name:'Men',d:[]}]},{name:'Brids',d:[]}]}); document.querySelector('#dtPrint').addEventListener('click',function(){ console.log('DataTree',tree.getData()); })","css":"","tutorial":[
-            { "title":"Usage","type":"text","content":"<ol type=\"1\"><li>+ button use to add famliy members of selected data.</li><li>e button use to edit selected data.</li><li>- buttom use to remove selectd data. </li></ol>" },
+            { "title":"Usage","type":"text","content":"<ol type=\"1\"><li>+ button use to add family members of selected data.</li><li>e button use to edit selected data.</li><li>- button use to remove selectd data. </li></ol>" },
             { "title":"Example","type":"demo","content":"<h1 align='center'>Data Tree</h1><div id='datatree' style='width: max-content;'></div>" },
             { "title":"HTML","type":"code","file":"html","content":"<script src=\"DataTree.js\"></script>\n<link href=\"DataTree.css\">\n<div id=\"datatree\"></div>" },
             { "title":"JavaScript","type":"code","file":"js","content":"var tree = new DataTree(\n   document.querySelector('#datatree'),\n   {name:'Creatures',d:[\n\t{name:'Animals',d:[]},\n\t{name:'Humans',d:[\n\t   {name:'Women',d:[]},\n\t   {name:'Men',d:[]}\n\t]},\n\t{name:'Brids',d:[]}\n   ]}\n);\n\n//how to use methods\nvar data=tree.getData();\nconsole.log(data);" },
