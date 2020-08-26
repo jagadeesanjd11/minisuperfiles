@@ -1,0 +1,10 @@
+{
+    "pro_details":[
+        { "id":3,"pro_id":3,"script":[],"style":[],"js":"","css":"","tutorial":[
+            { "title":"Demo","type":"text","content":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Ke1Y3P9D0Bc\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>" },
+            { "title":"Upcoming Update in ITO","type":"html","content":"<ul><li>Executed coding log history features to come soon. Give your support.</li></ul>" }
+        ], 
+        "gitScript":[],"gitStyle":[]
+     }
+    ]
+}
