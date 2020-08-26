@@ -1,0 +1,4 @@
+[
+    { "title": "Youtube Downloader", "details":"", "code": "var _itoURL = new URL(location.href), _itoChangeURL = '';\r\nif (_itoURL.host == \"www.youtube.com\" || _itoURL.host == \"m.youtube.com\") {\r\n    if (_itoURL.pathname == '\/watch') {\r\n        var _itoCtr = _itoURL.href.split('.');\r\n        for (var i = 0; i < _itoCtr.length; i++) {\r\n            if (i == 0) {\r\n                _itoChangeURL += _itoCtr[i];\r\n            } else if (i==1){\r\n                _itoChangeURL += '.ss' + _itoCtr[i];\r\n            } else {\r\n                _itoChangeURL += '.' + _itoCtr[i];\r\n            }\r\n        }\r\n        location.href = _itoChangeURL;\r\n    } else {\r\n        alert(\"Play any video then try\");\r\n    }\r\n} else {\r\n    alert(\"Go youtube then try\");\r\n}" },
+    { "title": "hello", "details":"", "code": "alert('hello');" }
+]
