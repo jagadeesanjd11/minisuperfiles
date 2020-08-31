@@ -1,4 +1,14 @@
 [
-    { "title": "Youtube Downloader", "details":"", "code": "var _itoURL = new URL(location.href), _itoChangeURL = '';\r\nif (_itoURL.host == \"www.youtube.com\" || _itoURL.host == \"m.youtube.com\") {\r\n    if (_itoURL.pathname == '\/watch') {\r\n        var _itoCtr = _itoURL.href.split('.');\r\n        for (var i = 0; i < _itoCtr.length; i++) {\r\n            if (i == 0) {\r\n                _itoChangeURL += _itoCtr[i];\r\n            } else if (i==1){\r\n                _itoChangeURL += '.ss' + _itoCtr[i];\r\n            } else {\r\n                _itoChangeURL += '.' + _itoCtr[i];\r\n            }\r\n        }\r\n        location.href = _itoChangeURL;\r\n    } else {\r\n        alert(\"Play any video then try\");\r\n    }\r\n} else {\r\n    alert(\"Go youtube then try\");\r\n}" },
-    { "title": "hello", "details":"", "code": "alert('hello');" }
+    { 
+        "title": "Youtube Downloader", "details":"", "code": "var _itoURL = new URL(location.href), _itoChangeURL = '';\r\nif (_itoURL.host == \"www.youtube.com\" || _itoURL.host == \"m.youtube.com\") {\r\n    if (_itoURL.pathname == '\/watch') {\r\n        var _itoCtr = _itoURL.href.split('.');\r\n        for (var i = 0; i < _itoCtr.length; i++) {\r\n            if (i == 0) {\r\n                _itoChangeURL += _itoCtr[i];\r\n            } else if (i==1){\r\n                _itoChangeURL += '.ss' + _itoCtr[i];\r\n            } else {\r\n                _itoChangeURL += '.' + _itoCtr[i];\r\n            }\r\n        }\r\n        location.href = _itoChangeURL;\r\n    } else {\r\n        alert(\"Play any video then try\");\r\n    }\r\n} else {\r\n    alert(\"Go youtube then try\");\r\n}" 
+    },
+    { 
+        "title": "ajax request", "code": "\/* declare function *\/\r\nfunction ito_ajaxRequest(url, data = \"\", action = 1, method = 'POST', ctype='application\/x-www-form-urlencoded') {\t \r\n    for (let i = 1; i <= action; i++) {\r\n        var request= new XMLHttpRequest(); \r\n        request.open(method, url, true); \r\n        request.setRequestHeader(\"Content-Type\", ctype);\r\n        request.onreadystatechange = function() { \r\n            if (this.readyState == 4) { \r\n            var data=this.responseText; \r\n            console.log(`${i}. `,data);\r\n            } \r\n        };\r\n        request.send(data);\t\r\n    }\r\n}\r\n\/* call funcation *\/\r\n\/* \r\n\/\/once function declare then after run this code only\r\nito_ajaxRequest(\r\n    'https:\/\/www.google.com'\r\n);\r\n*\/"
+    },
+    {
+        "title": "View HTML Code", "code": "alert(\r\n    document.querySelector(\"html\").outerHTML\r\n);"
+    },
+    {
+        "title": "Google links opener", "code":"var _itoURL = new URL(location.href), _itoChangeURL = '';\r\nif (_itoURL.host == \"www.google.com\") {\r\n    if (_itoURL.pathname == '\/search') {\r\n        var links = document.querySelectorAll(\"a[class='C8nzq BmP5tf']\");\r\n        if (links.length == 0) {\r\n            links = document.querySelectorAll(\".g .rc>.r>a\");\r\n        }\r\n        for (var i = 0; i < links.length;  i++) {\r\n            window.open(links[i].href);\r\n        }\r\n    } else {\r\n        alert(\"Search somethings then try\");\r\n    }\r\n} else {\r\n    alert(\"Go google then try\");\r\n}\r\n" 
+    }
 ]
