@@ -10,5 +10,8 @@
     },
     {
         "title": "Google links opener", "code":"var _itoURL = new URL(location.href), _itoChangeURL = '';\r\nif (_itoURL.host == \"www.google.com\") {\r\n    if (_itoURL.pathname == '\/search') {\r\n        var links = document.querySelectorAll(\"a[class='C8nzq BmP5tf']\");\r\n        if (links.length == 0) {\r\n            links = document.querySelectorAll(\".g .rc>.r>a\");\r\n        }\r\n        for (var i = 0; i < links.length;  i++) {\r\n            window.open(links[i].href);\r\n        }\r\n    } else {\r\n        alert(\"Search somethings then try\");\r\n    }\r\n} else {\r\n    alert(\"Go google then try\");\r\n}\r\n" 
+    },
+    {
+        "title": "w3schools adHide", "code": "var _itoURL = new URL(location.href);\r\nif (_itoURL.host == \"www.w3schools.com\") {\r\n    _itoSelector = `#mainLeaderboard, #snhb-bottom_medium_rectangle-0, \r\n    #tryitLeaderboard, #snhb-right_bottom_medium_rectangle-0, \r\n    #snhb-mid_content-0, #snhb-wide_skyscraper-0, #snhb-sidebar_sticky-0`;\r\n    var _itoCtr1 = document.querySelectorAll(_itoSelector);\r\n    for (var i =0; i < _itoCtr1.length; i++) {\r\n        _itoCtr1[i].style.display = 'none';\r\n    }\r\n}"
     }
 ]
