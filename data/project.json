@@ -5,6 +5,7 @@
         { 
             "id":3,"name":"ITO - I am the one","version":"2.0","slug":"ito","domains":"Browser extension","info":"This tool uses to inject your Javascript coding any web site, it like a browser console. You can save code and run at any time. Every people can easily use this, and we provide many codes for this tool like a youtube downloader.", 
             "links":[{"label":"Download (Firefox)", "link":"https://addons.mozilla.org/en-US/firefox/addon/ito-i-am-the-one/"}, {"label":"Download (Chrome)", "link":"https://chrome.google.com/webstore/detail/ito-i-am-the-one/joijhdcigeikbohmciiolinckblidjim"}] 
-        }
+        },
+        { "id":4,"name":"SingleKoppu - File manager","version":"1.0","slug":"singlekoppu","domains":"PHP","info":"It is the file manager. It has a single file, this file does all tasks.", "download":"https://github.com/minisuperfiles/singleKoppu", "links":[{"label":"Download", "link":"https://github.com/minisuperfiles/singleKoppu/archive/main.zip"}] }
     ]
 }
