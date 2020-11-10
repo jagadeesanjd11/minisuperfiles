@@ -1,7 +1,7 @@
 {
     "pro_details":[
         { "id":3,"pro_id":3,"script":[],"style":[],"js":"function isMobile() {\r\n  var result;\r\n  result = \/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini\/i.test(navigator.userAgent);\r\n  return result;\r\n}\r\nif(isMobile()){\r\n    var video = document.querySelector(\"#demo_video\");\r\n    video.height = \"auto\";\r\n    video.width = \"auto\";\r\n}","css":"","tutorial":[
-            { "title":"Demo","type":"text","content":"<iframe id=\"demo_video\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/MQhPFYxw7Fw\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>" },
+            { "title":"Demo","type":"text","content":"<iframe id=\"demo_video\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/MQhPFYxw7Fw\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe><br><p>Tamil demo video link <a target='_blank' href='https://youtu.be/ghpz9L6vGpY'>https://youtu.be/ghpz9L6vGpY</a></p>" },
             { "title":"Note:-","type":"html","content":"<p>We are not collect any data from your browser. This extension fully runs based on your local system. 100% safe give your support.</p>" },
             { "title":"Android","type":"html","content":"<p>If you need to use this extension in android device, download firefox version 68.<br><a href='https://androidapksfree.com/firefox/org-mozilla-firefox/download-old/firefox-68-11-0-apk/' target='_blank'>Firefox v68 download</a></p>" },
             { "title":"Upcoming Update in ITO","type":"html","content":"<ul><li>Executed coding log history features to come soon. Give your support.</li></ul>" }
