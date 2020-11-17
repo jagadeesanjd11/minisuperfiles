@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mini super files 23</title>
+    <meta name="description" content="Download mini super files | programming tips | Download Web Tools"/>
+    <script src="myfiles/JsPager/JsPager.js"></script>
+  </head>
+  <body>
+<script>
+var redirectCollection = [
+    { project: "ito", domain: "firefox", url: "https://www.google.com" }
+];
+var params = new URL(location.href);
+var project = params.searchParams.get('project');
+var domain = params.searchParams.get('domain');
+if (project && domain) {
+    for (let i = 0; i < redirectCollection.length; i++){
+        if (redirectCollection[i].project == project && redirectCollection[i].domain == domain) {
+            location.href =  redirectCollection[i].url;
+            break;
+        }
+    }
+}
+</script>
+302 failed.
+  </body>
+</html>

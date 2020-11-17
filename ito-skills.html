@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mini super files 23</title>
+    <meta name="description" content="Download mini super files | programming tips | Download Web Tools"/>
+    <script src="myfiles/JsPager/JsPager.js"></script>
+  </head>
+  <body id="top">
+  Hello world
+<script>
+//ui screen 
+function uiScreen(type,csfile=''){
+  tags={open:'',close:''};
+  switch(type){
+    case 'html' : tags.open=''; tags.close=''; break;
+    case 'text' : tags.open='<p>'; tags.close='</p>'; break;
+    case 'code' : tags.open=`<pre class="sf-code"><code data-language="${csfile}">`; tags.close='</code></pre>'; break;
+    case 'demo' : tags.open='<div class="sf-demo">'; tags.close='</div>'; break;
+    case 'syntax' : tags.open='<pre class="sf-syntax"><code>'; tags.close='</code></pre>'; break;
+    default :  tags.open='<p>'; tags.close='</p>';
+  }
+  return tags;
+}
+//jsChager
+var doc=new JsPager(
+    'Mini super files',
+    ["https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700",
+    "css/bootstrap.min.css",
+    "css/font-awesome.min.css",
+    "css/main.css"],
+    ["js/jquery-3.2.1.slim.min.js",
+    "js/popper.min.js",
+    "js/bootstrap.min.js",
+    "js/main.js"]
+);
+let program=JSON.parse(doc.HttpReq('data/ito_programs.json'));
+
+doc.title='ITO Programs';
+doc.script.push("https://raw.githubusercontent.com/ccampbell/rainbow/master/dist/rainbow.min.js");
+doc.style.push("https://raw.githubusercontent.com/ccampbell/rainbow/master/themes/css/monokai.css");
+doc.setBody(`<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <div class="masthead clearfix" style="position: initial;">
+        <div class="inner">
+          <div style="text-align: left;">
+            <a class="btn btn-xs btn-default btn-notify sf-menu" href="index.html">Home</a>
+            <a class="btn btn-xs btn-default btn-notify sf-menu active" href="superfiles.html">Super Files</a>
+            <a class="btn btn-xs btn-default btn-notify sf-menu">Donate</a>
+          </div>
+        </div>
+      </div><br>
+        <div class="inner cover" style="text-align: left;">
+
+          <div class="row">
+            
+              <div class="col-md-12">
+                <h3 class1="masthead-brand">ITO Programs</h3>
+                We provide coding service for ITO extension.
+                <dl>
+                  <dt>
+                how to use:-
+                </dt>
+                <dd>
+                <ol type="1">
+                  <li>Choose your coding and then copy that code.</li>
+                  <li>Go to ITO extension, click to new button then paste your code in ITO extension.</li>
+                  <li>Click to save button in ITO extension.</li>
+                  <li>You can run your code anytime and any website.</li>
+                </ol>
+                </dd>
+                </dl>
+                Enjoy...
+              </div>`);
+for(let i=0; i<program.length; i++){
+  let tag = uiScreen('code','js');
+  let title='<h5>'+program[i].title+'</h5>';
+  let details = (program[i].details) ? program[i].details : "";
+    doc.setBody(`<div class="col-md-12">
+                  <br>
+                  <dl>
+                    <dt>
+                      ${title}
+                    </dt>
+                    <dd>
+                      ${details}
+                    </dd>
+                  </dl>
+                  ${tag.open}
+${program[i].code}
+                  ${tag.close}
+                  <div class="copy-program">
+                    <textarea id="code${i}" >${program[i].code}</textarea>
+                    <p><a href="javascript:void(0)" onclick="copytext('code${i}')" style="padding: 7px 18px;text-transform: none;" class="btn btn-xs btn-default btn-notify sf-btn" >Copy</a></p>
+                  </div>
+                <br>
+              </div>`);
+}
+    doc.setBody(`
+        <div class="col-md-12">
+          <p class="lead"><a href="https://minisuperfiles.blogspot.com/p/documentation.html?project=ito" style="padding: 7px 18px;text-transform: none;" class="btn btn-xs btn-default btn-notify sf-btn" >Get ITO</a>`);
+            doc.setBody(`</p>
+        </div>
+          </div>
+
+        </div>
+      <div class="mastfoot" style="position: initial;">
+        <div class="inner">
+          <p> Contact @ <a href="mailto:jagadeesanjd11@gmail.com" target="_blank">jagadeesanjd11@gmail.com</a>.</p>
+          <p> <a href="#">Donete</a> | <a href="#">About</a> | <a href="#">Developer</a>#info </p>
+        </div>
+      </div>
+    <!--<footer>
+      <a href="">Email: jagadeesanjd11@gmail.com</a><a href="">Phone: +919715059096</a>
+    </footer>-->
+  </div>
+  </div>
+  `);
+//inner script
+doc.setJS(doc.HttpReq("https://raw.githubusercontent.com/ccampbell/rainbow/master/dist/rainbow.min.js"));
+doc.setJS(`
+function copytext(id){
+  elm=document.querySelector("#"+id);
+  elm.select();
+  elm.setSelectionRange(0,99999);
+  document.execCommand('copy');
+}
+`);
+//inser css
+doc.setStyle(doc.HttpReq("https://raw.githubusercontent.com/ccampbell/rainbow/master/themes/css/monokai.css"));
+doc.setStyle(`
+a{ color: white; }
+.sf-menu{ padding: 0.5rem 1rem;border-radius: 10px;margin-right: 10px; }
+.sf-btn{ padding: 7px 18px;text-transform: none; }
+.sf-demo {
+    background-color: white;
+    width: 100%;
+    color: black;
+    border: red;
+    border-radius: 30px 0px 30px 0px;
+    padding: 12px;
+    font-size: 13px;
+}
+.dt-name { font-size: initial; }
+.sf-code{ border-radius: 30px 0px 30px 0px; }
+.sf-syntax{ background-color: #fff; /*font-size: 15px;*/ color: #000; }
+mark{padding: unset; background-color:#000;}
+mark a{ color:white; }
+.close{float: none;font-size: inherit;font-weight: inherit;line-height: inherit;color: #000;text-shadow: none;opacity: inherit;} 
+code{ color:#000; }
+.copy-program textarea{
+  resize: none;width: 0px;height: 0px;border: none;
+}
+.copy-program p{
+  text-align: right;
+}
+`);
+doc.docChange();
+</script>
+  </body>
+</html>

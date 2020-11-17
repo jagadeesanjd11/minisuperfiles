@@ -51,43 +51,47 @@ doc.setBody(`<div class="site-wrapper">
         <div class="inner cover" style="text-align: left;">
 
           <div class="row">`);
-
-    doc.setBody(`<div class="col-md-12">
-                    <div class="sf-demo row" >
+    doc.setBody(`<div class="col-md-12">`);
+      let list = JSON.parse(doc.HttpReq('data/developer/list.json'));
+      for (var i = 0; i < list.length; i++) {
+        let profile = JSON.parse(doc.HttpReq(`data/developer/${list[i].slug}.json`));
+      doc.setBody(`<div class="sf-demo row" >
                         <div class="col-md-12">
-                          <h1>Jagadeesan S</h1><h4>Software Developer</h4><hr>
-                          <div class="col-md-12">
-                            <h5>Personal Details</h5>
-                            <div class="col-md-12">
-                              <p><b>Data of Birth :</b> 07-05-1997<br>
-                                <b>Gender :</b> Male<br>
-                                <b>Language Knowns :</b> Tamil and English<br>
-                                <b>Nationality :</b> Indian<br>
-                                <b>Home Town :</b> Thirukovilur, India<br>
-                                <b>Phone :</b> +91 9715059096<br>
-                                <b>Email :</b> jagadeesanjd11@gmail.com</p>
+                          <h2>${profile.name}</h2><h4>${profile.role}</h4><hr>`);
+            for (let j = 0; j < profile.topic.length; j++) {
+              doc.setBody(`<div class="col-md-12">
+                            <h5>${profile.topic[j].title}</h5>
+                            <div class="col-md-12"><p>`);
+                  for (let k = 0; k < profile.topic[j].data.length; k++) {
+                    if (k == (profile.topic[j].data.length-1)) {
+                      doc.setBody(`<b>${profile.topic[j].data[k].key} :</b> ${profile.topic[j].data[k].value}`);
+                    } else {
+                      doc.setBody(`<b>${profile.topic[j].data[k].key} :</b> ${profile.topic[j].data[k].value}<br>`);
+                    }
+                  }
+                  doc.setBody(`</p>
                             </div>
+                          </div>`);
+            }
+            
+             
+              if (profile.socialmedia) {
+                    doc.setBody(`<div class="col-md-12">
+                                  <h5>Social Media</h5>
+                                  <div class="col-md-12">
+                                    <p>`);
+                    for (let l = 0; l < profile.socialmedia.length; l++) {
+                      let color = (profile.socialmedia[l].color) ? profile.socialmedia[l].color : "#3b5998";
+                      doc.setBody(`<b>${profile.socialmedia[l].media} :</b> <a style="color:${color}" target="_blank" href="${profile.socialmedia[l].link}"><u>${profile.socialmedia[l].name}</u></a><br>`); 
+                    }
+                    doc.setBody(`</p>
                           </div>
-                          <div class="col-md-12">
-                            <h5>Technical Skills</h5>
-                            <div class="col-md-12">
-                              <p><b>Programming Languages :</b> Java, C++, C.<br>
-                                <b>Web Development :</b> JavaScript, PHP, MySQL, MSSQL, HTML, CSS, JSP.<br>
-                                <b>AREAS OF INTEREST :</b> Web Development, Programming, Hacking and Animation.<br>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <h5>Social Media</h5>
-                            <div class="col-md-12">
-                              <p><b>Facebook :</b> <a style="color:#3b5998" target="_blank" href="https://www.facebook.com/jedhi.jagadeesan"><u>Jagadeesan S</u></a><br>
-                                <b>Instagram :</b> <a style="color:#ea496a" target="_blank" href="https://www.instagram.com/jagadeesan_jd/?hl=en"><u>jagadeeesan_jd</u></a><br>
-                                
-                            </div>
-                          </div>
-                        </div>
-                    <div>
-            <br></div>`);
-
+                        </div>`);
+              }
+              doc.setBody(`</div>
+                    </div><br>`);
+      }
+      doc.setBody(`<br></div>`);
     doc.setBody(`
         <!--<div class="col-md-12">
           <p class="lead"><a href="documentation.html?project#" style="padding: 7px 18px;text-transform: none;" class="btn btn-xs btn-default btn-notify sf-btn" >Donete</a>
