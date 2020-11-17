@@ -1,0 +1,18 @@
+{ "id":2, "slug":"bala","name":"Balasubramanian V", "role":"Software Developer", "topic":[
+        { "title": "Personal Details", "data":[
+                {"key":"Gender", "value":"Male"},
+                {"key":"Language Knowns", "value":"Tamil and English"},
+                {"key":"Nationality", "value":"Indian"},
+                {"key":"Home Town", "value":"Tirunelveli, Tamil nadu, India"},
+                {"key":"Phone", "value":"+91 7845758712"},
+                {"key":"Email", "value":"vvbala1995@gmail.com"}
+            ] 
+        },
+        { "title": "Technical Skills", "data":[
+                {"key":"Programming Languages", "value":"Java, C"},
+                {"key":"Web Development", "value":"JavaScript, PHP, MySQL, HTML, CSS"},
+                {"key":"AREAS OF INTEREST", "value":"Web Development, Programming"}
+            ]
+        }
+    ]
+}
